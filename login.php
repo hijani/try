@@ -6,12 +6,7 @@
         $gender = $_POST['gender'];
 
 
-        $connection = mysqli_connect('localhost', 'root', '', 'try');
-        if(!$connection) {
-            die("connection error" . " " . mysqli_connect_error());
-        } else {
-            echo "connected";
-        }
+        
 
 
         // $insert_query = "INSERT INTO login(username, gender)";
