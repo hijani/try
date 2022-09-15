@@ -1,5 +1,38 @@
-<?php include "db.php"; ?>
-<?php include "insert_data.php"; ?>
+
+<?php
+
+    
+    if (isset($_POST['submit'])) {   
+        global $connection; 
+
+        $username = $_POST['username'];
+        $gender = $_POST['gender'];
+
+
+        $connection = mysqli_connect('localhost', 'root', '', 'try');
+        if(!$connection) {
+            die("connection error" . " " . mysqli_connect_error());
+        }
+
+
+        $insert_query = "INSERT INTO login(username, gender)";
+        $insert_query .= "VALUES('$username', $gender)";
+        $insert_query_connection = mysqli_query($connection, $insert_query);
+
+        if(!$insert_query_connection) {
+            die('connection error');
+        }
+
+
+        $display_query = "SELECT * FROM login";
+        $display_query_connection = mysqli_query($connection, $hell);
+        
+        while($row = mysqli_fetch_assoc($display_query_connection)) {
+            print_r($row);
+        }
+    }
+
+?>
 
 
 <!DOCTYPE html>
@@ -23,9 +56,6 @@
             <input type="number" name="gender" placeholder="Gender" class="form-control">
         </div>
         <input type="submit" name="submit" value="submit"  class="form-control btn btn-primary">
-        <select name="" id="">
-            
-        </select>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
