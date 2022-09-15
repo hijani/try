@@ -2,6 +2,11 @@
 
     if (isset($_POST['submit'])) {
 
+        $username = $_POST['username'];
+        $gender = $_POST['gender'];
+
+
+        $connection = mysqli_connect('localhost', 'root', '', 'try');
         
 
 
