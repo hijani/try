@@ -1,6 +1,6 @@
 <?php include "db.php"; ?>
 <?php include "insert_data.php"; ?>
-<?php include "display_data.php"; ?>
+
 
 
 <!DOCTYPE html>
@@ -25,9 +25,7 @@
         </div>
         <input type="submit" name="submit" value="submit"  class="form-control btn btn-primary">
         <select name="" id="">
-            <?php 
-                showAllData();
-            ?>
+            
         </select>
     </form>
 
