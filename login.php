@@ -16,7 +16,25 @@
 
         $insert_query = "INSERT INTO login(username, gender)";
         $insert_query .= "VALUES('$username', $gender)";
-        echo $insert_query;
+        $insert_query_connection = mysqli_query($connection, $insert_query);
+
+        if(!$insert_query_connection) {
+            die('connection error');
+        }
+
+        $display_query = "SELECT * FROM login";
+        $display_query_connection = mysqli_query($connection, $display_query);
+
+        while($row = mysqli_fetch_assoc($display_query_connection)) {
+            ?>
+            <pre>
+            <?php 
+                print_r($row);
+            ?>
+            </pre>
+
+            <?php
+        }
 
 
 
