@@ -14,13 +14,13 @@
         }
 
 
-        $insert_query = "INSERT INTO login(username, gender)";
-        $insert_query .= "VALUES('$username', $gender)";
-        $insert_query_connection = mysqli_query($connection, $insert_query);
+        // $insert_query = "INSERT INTO login(username, gender)";
+        // $insert_query .= "VALUES('$username', $gender)";
+        // $insert_query_connection = mysqli_query($connection, $insert_query);
 
-        if(!$insert_query_connection) {
-            die('connection error');
-        }
+        // if(!$insert_query_connection) {
+        //     die('connection error');
+        // }
 
         $display_query = "SELECT * FROM login";
         $display_query_connection = mysqli_query($connection, $display_query);
@@ -29,9 +29,8 @@
             ?>
             <pre>
             <?php 
-                print_r($row);
+            print_r($row);
             ?>
-            </pre>
 
             <?php
         }
