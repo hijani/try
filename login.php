@@ -11,7 +11,7 @@
             die("connection error" . " " . mysqli_connect_error());
         }
 
-        
+
 
 
 
@@ -52,6 +52,7 @@
         <div class="form-group">
             <input type="number" name="gender" placeholder="Gender" class="form-control">
         </div>
+        <input type="submit" name="submit" value="submit"  class="form-control btn btn-primary">
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
