@@ -1,3 +1,6 @@
+<?php include "db.php"; ?>
+<?php include "insert_data.php"; ?>
+<?php include "display_data.php"; ?>
 
 
 <!DOCTYPE html>
