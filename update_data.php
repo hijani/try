@@ -23,7 +23,7 @@
         <div class="form-group">
             <input type="number" name="gender" placeholder="Gender" class="form-control">
         </div>
-        <select name="" id="">
+        <select name="id" id="">
             <?php display_data() ?>
         </select>
 
