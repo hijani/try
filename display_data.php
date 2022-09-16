@@ -5,7 +5,7 @@
     global $connection;
 
     $display_query = "SELECT * FROM login";
-    $display_query_connection = mysqli_query($connection, $hell);
+    $display_query_connection = mysqli_query($connection, $display_query);
 
     function display_data() {
         while($row = mysqli_fetch_assoc($display_query_connection)) {
@@ -38,7 +38,7 @@
             <input type="number" name="gender" placeholder="Gender" class="form-control">
         </div>
         <select name="" id="">
-            <?php  ?>
+            <?php display_data() ?>
         </select>
 
         <input type="submit" name="submit" value="submit"  class="form-control btn btn-primary">
