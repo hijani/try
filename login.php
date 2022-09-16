@@ -3,35 +3,17 @@
 
     
     if (isset($_POST['submit'])) {   
-        global $connection; 
 
         $username = $_POST['username'];
         $gender = $_POST['gender'];
+?>
 
+<?php include "db.php"; ?>
+<?php include "insert_data.php"; ?>
+<?php include "display_data.php"; ?>
 
-        $connection = mysqli_connect('localhost', 'root', '', 'try');
-        if(!$connection) {
-            die("connection error" . " " . mysqli_connect_error());
-        }
-
-
-        $insert_query = "INSERT INTO login(username, gender)";
-        $insert_query .= "VALUES('$username', $gender)";
-        $insert_query_connection = mysqli_query($connection, $insert_query);
-
-        if(!$insert_query_connection) {
-            die('connection error');
-        }
-
-
-        $display_query = "SELECT * FROM login";
-        $display_query_connection = mysqli_query($connection, $hell);
-        
-        while($row = mysqli_fetch_assoc($display_query_connection)) {
-            print_r($row);
-        }
-    }
-
+<?php   
+    }   
 ?>
 
 
