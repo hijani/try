@@ -32,4 +32,19 @@
         }
     }
 
+    function delete_data() {
+        global $connection;
+        
+        $id = $_POST['id'];
+
+        $new_query = "DELETE FROM login ";
+        $new_query .= "WHERE id = $id ";
+
+        $update_query = mysqli_query($connection, $new_query);
+        
+        if(!$update_query) {
+            die('query failed' . mysqli_error($connection));
+        }
+    }
+
 ?>

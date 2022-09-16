@@ -6,7 +6,7 @@
 
     if(isset($_POST['submit'])) {
 
-        update_data();
+        delete_data();
     }
 
 
@@ -40,7 +40,7 @@
             <?php display_data() ?>
         </select>
 
-        <input type="submit" name="submit" value="Update"  class="form-control btn btn-primary">
+        <input type="submit" name="submit" value="Delete"  class="form-control btn btn-primary">
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
