@@ -14,12 +14,12 @@
         $query = "UPDATE login SET ";
         $query .= "username = '$username',";
         $query .= "gender = '$gender',";
-        $query .= "WHERE id = '$id'";
+        $query .= "WHERE id = $id";
 
         $update_query = mysqli_query($connection, $query);
         
         if(!$update_query) {
-            die('connection error' . mysqli_error($connection));
+            die('query failed' . mysqli_error($connection));
         }
     }
 
