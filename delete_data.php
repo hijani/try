@@ -29,7 +29,7 @@
 <body>
     <h1 class="text-center">Try Login Database</h1>
 
-    <form action="update_data.php" method="post">
+    <form action="delete_data.php" method="post">
         <div class="form-group">
             <input type="text" name="username" placeholder="Username" class="form-control">
         </div>
