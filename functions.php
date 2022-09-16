@@ -13,4 +13,23 @@
         }  
     }
 
+    function update_data() {
+        global $connection;
+
+        $username = $_POST['username'];
+        $gender = $_POST['gender'];
+        $id = $_POST['id'];
+
+        $new_query = "UPDATE login SET ";
+        $new_query .= "username = '$username', ";
+        $new_query .= "gender = '$gender' ";
+        $new_query .= "WHERE id = $id ";
+
+        $update_query = mysqli_query($connection, $new_query);
+        
+        if(!$update_query) {
+            die('query failed' . mysqli_error($connection));
+        }
+    }
+
 ?>
