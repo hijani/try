@@ -40,10 +40,6 @@
         <div class="form-group">
             <input type="number" name="gender" placeholder="Gender" class="form-control">
         </div>
-        <select name="" id="">
-            <?php  ?>
-        </select>
-
         <input type="submit" name="submit" value="submit"  class="form-control btn btn-primary">
     </form>
 
