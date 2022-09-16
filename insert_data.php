@@ -1,11 +1,53 @@
-<?php 
+<?php include "db.php"; ?>
 
-    $insert_query = "INSERT INTO login(username, gender)";
-    $insert_query .= "VALUES('$username', $gender)";
-    $insert_query_connection = mysqli_query($connection, $insert_query);
+<?php
+    
+    if (isset($_POST['submit'])) {  
+        
+        global $connection;
 
-    if(!$insert_query_connection) {
-        die('connection error');
+        $username = $_POST['username'];
+        $gender = $_POST['gender'];
+        
+        $insert_query = "INSERT INTO login(username, gender)";
+        $insert_query .= "VALUES('$username', $gender)";
+        $insert_query_connection = mysqli_query($connection, $insert_query);
+
+        if(!$insert_query_connection) {
+            die('connection error');
+        }
     }
-
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>try login database</title>
+</head>
+<body>
+    <h1 class="text-center">Try Login Database</h1>
+
+    <form action="insert_data.php" method="post">
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Username" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="number" name="gender" placeholder="Gender" class="form-control">
+        </div>
+        <select name="" id="">
+            <?php  ?>
+        </select>
+
+        <input type="submit" name="submit" value="submit"  class="form-control btn btn-primary">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
