@@ -27,20 +27,30 @@
     <title>try login database</title>
 </head>
 <body>
+
+    <a href="delete_data.php" class="nav-links">delete data</a>
+    <a href="insert_data.php" class="nav-links">insert data</a>
+    <a href="update_data.php" class="nav-links">update data</a>
+
+
+
     <h1 class="text-center">Try Login Database</h1>
 
     <form action="delete_data.php" method="post">
-        <div class="form-group">
+        <div class="form-group col-sm-6">
             <input type="text" name="username" placeholder="Username" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group col-sm-6">
             <input type="number" name="gender" placeholder="Gender" class="form-control">
         </div>
-        <select name="id" id="" class="form-control">
-            <?php display_data() ?>
-        </select>
-
-        <input type="submit" name="submit" value="Delete"  class="form-control btn btn-primary">
+        <div class="form-group col-sm-6">
+            <select name="id" id="" class="form-control">
+                <?php display_data() ?>
+            </select>
+        </div>
+        <div class="form-group col-sm-6">
+            <input type="submit" name="submit" value="Delete"  class="form-control btn btn-primary">
+        </div>
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>

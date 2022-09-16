@@ -31,6 +31,12 @@
     <title>try login database</title>
 </head>
 <body>
+
+    <a href="delete_data.php" class="nav-links">delete data</a>
+    <a href="insert_data.php" class="nav-links">insert data</a>
+    <a href="update_data.php" class="nav-links">update data</a>
+
+
     <h1 class="text-center">Try Login Database</h1>
 
     <form action="insert_data.php" method="post">
