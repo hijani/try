@@ -2,6 +2,33 @@
 <?php include "functions.php"; ?>
 
 
+<?php 
+
+    if(isset($_POST['submit'])) {
+
+        global $connection;
+        $username = $_POST['username'];
+        $gender = $_POST['gender'];
+        $id = $_POST['id'];
+
+        $query = "UPDATE login SET ";
+        $query .= "username = '$username',";
+        $query .= "gender = '$gender',";
+        $query .= "WHERE id = '$id'";
+
+        $update_query = mysqli_query($connection, $query);
+        
+        if(!$update_query) {
+            die('connection error' . mysqli_error($connection));
+        }
+    }
+
+
+
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
